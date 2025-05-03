@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Form</title>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form>
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="contact">Contact Number</label>
+            <input type="tel" id="contact" name="contact" required>
+
+            <label for="address">Address</label>
+            <textarea name="address" id="address" required></textarea>
+
+            <label for="company">Company Name</label>
+            <input type="text" name="company" id="company" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="department">Department</label>
+            <select name="department" id="department" required>
+                <option value="">-- Select Department --</option>
+                <option value="HR">HR</option>
+                <option value="Sales">Sales</option>
+                <option value="Development">Development</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Others">Others</option>
+            </select>
+
+            <label>Gender</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="Male" required>Male</label>
+                <label><input type="radio" name="gender" value="Female" required>Female</label>
+                <label><input type="radio" name="gender" value="Prefer Not to Say" required>Prefer Not to Say</label>
+            </div>
+
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+</body>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(229, 189, 231);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .form-container{
+        background-color: white;
+        padding: 30px;
+        border: 8px;
+        width: 100%;
+        max-width: 500px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+    .form-container h2{
+        text-align: center;
+        margin-bottom: 20px;
+        color: rgb(138, 29, 138);
+        font-size: 30px;
+    }
+    label{
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        color: rgb(67, 24, 67);
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select,
+    textarea{
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+    textarea{
+        resize: vertical;
+        min-height: 80px;
+    }
+    .radio-group{
+        margin-top: 5px;
+    }
+    .radio-group label{
+        display: inline-block;
+        margin-right: 15px;
+        font-weight: normal;
+    }
+    .submit-button{
+        width: 100%;
+        padding: 12px;
+        margin-top: 25px;
+        background-color: rgb(124, 21, 124);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .submit-button:hover{
+        background-color: rgb(211, 121, 211);
+    }
+</style>
+</html>
